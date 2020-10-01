@@ -5,11 +5,14 @@ body{
     font-size: 4vmax;
 }
 .card{
-    background-color: rgba(71, 108, 155, .2);
+    background-color: rgba(71, 108, 155, .1);
 }
 .card-title{
     font-size: 1.7vmax;
 }
 p{
     font-size: 1.6vmax;
+}
+html,body{
+    height:100vh;
 }
