@@ -1,6 +1,6 @@
 document.getElementById('getweatherbtn').addEventListener('click', weather);
 
-// trying to get button working
+// trying to get enter button working
 // document.getElementById('zipcode').addEventListener('keydown', weather);
 // // btn.addEvenListener('keyup', weather )
 
@@ -25,14 +25,13 @@ async function weather() {
         alert('please enter a valid 5-digit US zip-code')
     }
     // another alert if not complete
+    // returns if 'bad request'
     else if (data.cod == "400"){
         alert('Please enter a valid 5-digit US zip-code')
     }
     // else run function and display
     else {
         let cityName = data.name;
-    
-        
         let conditions = data.weather['0'].description;
         console.log(conditions);
         let temp = data.main.temp;
@@ -47,11 +46,11 @@ async function weather() {
         var icon = document.getElementById("weatherIcon");
         icon.src = `http://openweathermap.org/img/wn/${iconCode}@4x.png`;
         //temp conversions
-
-        
         tempf.innerHTML = Math.floor((temp - 273.15) * 9 / 5 + 32) + '&deg;' + "F";
         tempc.innerHTML = Math.floor(temp - 273.15) + '&deg;' + "C";
         tempk.innerHTML = Math.floor(temp) + '&deg;' + "K";
+
+        console.log(data.cod);
     }
 }
 
