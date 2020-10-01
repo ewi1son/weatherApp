@@ -6,7 +6,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-	JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -14,53 +13,49 @@
 </head>
 
 <body>
-    <div class="container mt-4">
+    <div class="container mt-4 border">
         <div class="row">
             <div class="col">
-                <div class="card text-center">
-                    <div class="card-header h1">Weather</div>
-                    <div class="card-body">
-                        <div class="col-sm-3 mx-auto">
-                            <label class="sr-only" for="zipcode">Name</label>
-                            <input type="text" class="form-control" type="number" id="zipcode" placeholder="Zip Code">
-                        </div>
-                        <button type="button" class="btn btn-dark mt-3 mb-3" id="getweatherbtn">Get Weather</button>
+                <div class="card text-center mt-4">
+                    <div class="card-header">Weather</div>
+                    <!-- <div class="card-body"> -->
+                    <div class="col-sm-3 mx-auto">
+                        <img class="card-text" id="weatherIcon">
+                        <label class="sr-only" for="zipcode">Name</label>
+                        <input type="text" class="form-control text-center" type="number" id="zipcode"
+                            placeholder="Zip Code">
+
+                        <button type="button" class="btn btn-dark m-3" id="getweatherbtn">Get Weather</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container mt-4">
+
+        <div class="container">
             <div class="row">
                 <div class="col">
                     <!-- card deck so same size but not attached -->
-                    <div class="card-deck">
-                        <div class="card">
-                            <div class="card-body">
+                    <div class="card-deck m-4 text-center">
+                        <div class="card p-2">
+                            <!-- <div class="card-body"> -->
                                 <h5 class="card-title">City</h5>
                                 <p class="card-text" id="city"></p>
-                            </div>
+                            <!-- </div> -->
                         </div>
-                        <div class="card">
-                            <div class="card-body">
+                        <div class="card p-2">
+                            <!-- <div class="card-body"> -->
                                 <h5 class="card-title">Conditions</h5>
                                 <p class="card-text" id=conditions></p>
-                            </div>
+                            <!-- </div> -->
                         </div>
-                        <div class="card">
-                            <div class="card-body">
+                        <div class="card p-2">
+                            <!-- <div class="card-body"> -->
                                 <h5 class="card-title">Temperature</h5>
                                 <p class="card-text" id="tempF"></p>
                                 <p class="card-text" id="tempC"> </p>
                                 <p class="card-text" id="tempK"> </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                          
-                            <div class="card-body">
-                                <h5 class="card-title">Icon</h5>
-                                <img class="card-text" id="weatherIcon">
-                            </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,15 @@
 body{
-    background-color: #2F3E46;
+    background-color: whitesmoke;
+}
+.card-header{
+    font-size: 4vmax;
 }
 .card{
-    background-color: rgba(202, 210, 197, .6);
+    background-color: rgba(71, 108, 155, .2);
+}
+.card-title{
+    font-size: 1.7vmax;
+}
+p{
+    font-size: 1.6vmax;
 }
