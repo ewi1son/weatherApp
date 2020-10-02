@@ -10,6 +10,7 @@ document.getElementById('getweatherbtn').addEventListener('click', weather);
 //     }
 // });
 
+// setup async function
 async function weather() {
     let zip = document.getElementById('zipcode').value;
 
@@ -37,14 +38,14 @@ async function weather() {
         let temp = data.main.temp;
         //pulling icon based on json code
         let iconCode = data.weather['0'].icon;
-        
+        //start changing dom
         document.getElementById("city").innerHTML = cityName;
         document.getElementById("conditions").innerHTML = conditions;
         var tempf = document.getElementById("tempF");
         var tempc = document.getElementById("tempC");
         var tempk = document.getElementById("tempK");
         var icon = document.getElementById("weatherIcon");
-        icon.src = `http://openweathermap.org/img/wn/${iconCode}@4x.png`;
+        icon.src = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
         //temp conversions
         tempf.innerHTML = Math.floor((temp - 273.15) * 9 / 5 + 32) + '&deg;' + "F";
         tempc.innerHTML = Math.floor(temp - 273.15) + '&deg;' + "C";
